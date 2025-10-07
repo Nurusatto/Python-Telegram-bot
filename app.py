@@ -18,9 +18,12 @@ class ShizukaBot:
 
     def add_handlers(self):
         self.app.add_handler(CommandHandler("start",start))
-        self.app.add_handler(TestConversation().get_handler())
 
-        self.app.add_handler(CallbackQueryHandler(button_handler))
+        test_conv = TestConversation() 
+        self.app.add_handler(test_conv.get_handler())
+
+        self.app.add_handler(CallbackQueryHandler(button_handler, pattern="^(help|schedule)$"))
+
 
 
 

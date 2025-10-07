@@ -15,7 +15,7 @@ with open(BOT_FILE, "r", encoding="utf-8") as f:
 with open(CLASS_FILE, "r", encoding="utf-8") as f:
     CLASS = json.load(f)
     
-with open(CLASS_FILE, "r", encoding="utf-8") as f:
+with open(TEST_FILE, "r", encoding="utf-8") as f:
     TEST = json.load(f)
 
 
