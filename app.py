@@ -22,7 +22,7 @@ class ShizukaBot:
         test_conv = TestConversation() 
         self.app.add_handler(test_conv.get_handler())
 
-        self.app.add_handler(CallbackQueryHandler(button_handler, pattern="^(help|schedule)$"))
+        self.app.add_handler(CallbackQueryHandler(button_handler, pattern="^(help|schedule|testing)$"))
 
 
 
@@ -33,7 +33,10 @@ class ShizukaBot:
         ])
 
     def run(self):
-        self.app.run_polling()
+        try:
+            self.app.run_polling()
+        except KeyboardInterrupt:
+            print("🛑 Бот остановлен пользователем.")
 
 
 if __name__ == "__main__":
