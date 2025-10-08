@@ -92,7 +92,7 @@ class TestConversation:
             context.user_data["correct"] = context.user_data.get("correct", 0) + 1 # type: ignore
             await query.edit_message_text(self.alert["yes"])  # type: ignore
         else:
-            await query.edit_message_text(self.alert["no"])  # type: ignore
+            await query.edit_message_text(self.alert["no"]) # type: ignore 
 
         
         context.user_data["current"] = context.user_data.get("current", 0) + 1 # type: ignore

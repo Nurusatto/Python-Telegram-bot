@@ -22,7 +22,11 @@ class ShizukaBot:
         test_conv = TestConversation() 
         self.app.add_handler(test_conv.get_handler())
 
+        reminder_conv = ReminderConversation()
+        self.app.add_handler(reminder_conv.get_handler())
+
         self.app.add_handler(CallbackQueryHandler(button_handler, pattern="^(help|schedule|testing)$"))
+
 
 
 

@@ -1,3 +1,3 @@
 from .conv_test import TestConversation
-
-__all__ =['TestConversation']
+from .conv_reminder import ReminderConversation
+__all__ =['TestConversation','ReminderConversation']
