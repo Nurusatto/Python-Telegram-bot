@@ -60,7 +60,7 @@ class ReminderConversation:
 
         chosen_day = query.data # type: ignore
         classValue = context.user_data.get('class')  # type: ignore
-        schedule_for_class = CLASS[classValue]["schedule"]  # <--- добавляем этот уровень
+        schedule_for_class = CLASS[classValue]["schedule"] 
         day_schedule = schedule_for_class.get(chosen_day)
         
         if not day_schedule:
